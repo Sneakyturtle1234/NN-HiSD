@@ -1,0 +1,15 @@
+{
+    "function_name": "Potential_3d",
+    "function_module_path": "functions.py",
+    "region": [[-1, 7], [-1, 7], [-1, 7], [3, 7]],
+    "num_points": 40000,
+    "dataset_type": "parametric",
+    "seed": 42,
+    "layer": [128, 128, 128],
+    "lr": 1e-3,
+    "epoch": 30000,
+    "batch_size": 2000,
+    "model_filename": "parameters/parametric3d.pth",
+    "report": true,
+    "report_interval": 20
+}

@@ -1,0 +1,24 @@
+REMARK  FINAL VELOCITIES WRITTEN BY NAMD AT TIMESTEP 500
+ATOM      1  C   ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  C 
+ATOM      2  O   ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  O 
+ATOM      3  NT  ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  N 
+ATOM      4  HNT ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM      5  CAT ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  C 
+ATOM      6  HT1 ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+ATOM      7  HT2 ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+ATOM      8  HT3 ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM      9  CAY ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  C 
+ATOM     10  HY1 ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM     11  HY2 ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM     12  HY3 ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM     13  CY  ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  C 
+ATOM     14  OY  ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  O 
+ATOM     15  N   ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  N 
+ATOM     16  HN  ALA X   1       0.000   0.000   0.000  0.00  0.00      ALA  H 
+ATOM     17  CA  ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  C 
+ATOM     18  HA  ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+ATOM     19  CB  ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  C 
+ATOM     20  HB1 ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+ATOM     21  HB2 ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+ATOM     22  HB3 ALA X   1       0.000   0.000   0.000  1.00  0.00      ALA  H 
+END

@@ -1,0 +1,16 @@
+{
+    "function_name": "Potential_2d",
+    "function_module_path": "functions.py",
+    "region": [[-1.0, 7.0], [-1.0, 7.0]],
+    "num_points": 5000,
+    "dataset_type": "random",
+    "seed": 43,
+    "layer": [128, 128, 128],
+    "lr": 0.0003,
+    "epoch": 30000,
+    "batch_size": 1000,
+    "model_filename": "parameters/simple2d.pth",
+    "report": true,
+    "report_interval": 200,
+    "grad_output" : true
+}

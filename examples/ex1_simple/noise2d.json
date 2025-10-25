@@ -1,0 +1,30 @@
+{
+    "function_name": "Potential_2d",
+    "function_module_path": "functions.py",
+    "region": [
+        [
+            -1.0,
+            7.0
+        ],
+        [
+            -1.0,
+            7.0
+        ]
+    ],
+    "num_points": 5000,
+    "dataset_type": "random_with_noise",
+    "proportion": 0.1,
+    "std_dev": 0.1,
+    "seed": 42,
+    "layer": [
+        128,
+        128,
+        128
+    ],
+    "lr": 0.001,
+    "epoch": 30000,
+    "batch_size": 500,
+    "model_filename": "parameters/noise2d.pth",
+    "report": true,
+    "report_interval": 100
+}

@@ -1,0 +1,16 @@
+{
+    "function_name": "MMB",
+    "function_module_path": "functions.py",
+    "dimension": 2,
+    "region": [[-2.8, 0.89], [0.0, 2.2]],
+    "num_points": 5000,
+    "dataset_type": "random",
+    "seed": 42,
+    "layer": [128, 128, 128],
+    "lr": 0.001,
+    "epoch": 30000,
+    "batch_size": 250,
+    "model_filename": "parameters/mmb.pth",
+    "report": true,
+    "report_interval": 100
+}

@@ -1,0 +1,29 @@
+{
+    "function_name": "MB",
+    "function_module_path": "functions.py",
+    "region": [
+        [
+            -1.5,
+            0.25
+        ],
+        [
+            0.0,
+            1.95
+        ]
+    ],
+    "num_points": 1000,
+    "dataset_type": "random_with_grad",
+    "proportion": 0.15,
+    "seed": 42,
+    "layer": [
+        128,
+        128,
+        128
+    ],
+    "lr": 0.001,
+    "epoch": 30000,
+    "batch_size": 250,
+    "model_filename": "parameters/mbnumbers_grad.pth",
+    "report": true,
+    "report_interval": 100
+}

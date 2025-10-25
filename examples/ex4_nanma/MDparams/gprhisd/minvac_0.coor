@@ -1,0 +1,24 @@
+REMARK  FINAL COORDINATES WRITTEN BY NAMD AT TIMESTEP 500
+ATOM      1  C   ALA X   1      -0.830   0.974  -2.079  1.00  0.00      ALA  C 
+ATOM      2  O   ALA X   1      -0.411   0.060  -2.779  1.00  0.00      ALA  O 
+ATOM      3  NT  ALA X   1      -1.448   2.048  -2.617  0.00  0.00      ALA  N 
+ATOM      4  HNT ALA X   1      -1.774   2.777  -2.021  0.00  0.00      ALA  H 
+ATOM      5  CAT ALA X   1      -1.626   2.209  -4.043  0.00  0.00      ALA  C 
+ATOM      6  HT1 ALA X   1      -0.742   2.719  -4.482  1.00  0.00      ALA  H 
+ATOM      7  HT2 ALA X   1      -2.527   2.821  -4.260  1.00  0.00      ALA  H 
+ATOM      8  HT3 ALA X   1      -1.749   1.230  -4.554  0.00  0.00      ALA  H 
+ATOM      9  CAY ALA X   1       1.517   3.742   0.659  0.00  0.00      ALA  C 
+ATOM     10  HY1 ALA X   1       0.687   4.182   1.252  0.00  0.00      ALA  H 
+ATOM     11  HY2 ALA X   1       1.769   4.420  -0.184  0.00  0.00      ALA  H 
+ATOM     12  HY3 ALA X   1       2.412   3.642   1.309  0.00  0.00      ALA  H 
+ATOM     13  CY  ALA X   1       1.148   2.412   0.129  0.00  0.00      ALA  C 
+ATOM     14  OY  ALA X   1       2.002   1.587  -0.152  0.00  0.00      ALA  O 
+ATOM     15  N   ALA X   1      -0.162   2.175  -0.023  1.00  0.00      ALA  N 
+ATOM     16  HN  ALA X   1      -0.825   2.858   0.275  0.00  0.00      ALA  H 
+ATOM     17  CA  ALA X   1      -0.688   0.938  -0.560  1.00  0.00      ALA  C 
+ATOM     18  HA  ALA X   1      -0.012   0.128  -0.332  1.00  0.00      ALA  H 
+ATOM     19  CB  ALA X   1      -2.058   0.658   0.090  1.00  0.00      ALA  C 
+ATOM     20  HB1 ALA X   1      -2.775   1.481  -0.118  1.00  0.00      ALA  H 
+ATOM     21  HB2 ALA X   1      -2.484  -0.295  -0.291  1.00  0.00      ALA  H 
+ATOM     22  HB3 ALA X   1      -1.934   0.569   1.190  1.00  0.00      ALA  H 
+END

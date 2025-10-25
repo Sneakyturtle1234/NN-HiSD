@@ -1,0 +1,57 @@
+colvarsTrajFrequency    500
+colvarsRestartFrequency 500
+
+
+colvar {
+  name phi
+
+  width 5.0
+  lowerboundary -259.82
+  upperboundary 100.18
+
+  dihedral {
+    onesiteTotalForce
+    group1 { 
+      atomnumbers 13
+    }
+    group2 { 
+      atomnumbers 15
+    }
+    group3 { 
+      atomnumbers 17
+    }
+    group4 { 
+      atomnumbers 1
+    }
+  }
+}
+
+colvar {
+  name psi
+
+  width 5.0
+  lowerboundary -105.0
+  upperboundary 255.0
+
+  dihedral {
+    onesiteTotalForce
+    group1 { 
+      atomnumbers 3
+    }
+    group2 { 
+      atomnumbers 1
+    }
+    group3 { 
+      atomnumbers 17
+    }
+    group4 { 
+      atomnumbers 15
+    }
+  }
+}
+
+metadynamics {
+  colvars phi psi
+  hillWidth 15.0
+  hillWeight 0.5
+}
