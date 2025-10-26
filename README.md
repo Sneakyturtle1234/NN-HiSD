@@ -50,7 +50,7 @@ NN-HiSD, a method which utilizes a neural network surrogate model to approximate
 
 1.  **Clone the repository:**
     ```bash
-    git clone git@github.com:Sneakyturtle1234/NN-HiSD.git
+    git clone https://github.com/Sneakyturtle1234/NN-HiSD.git
     cd NN-HiSD
     ```
 
