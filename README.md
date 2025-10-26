@@ -296,7 +296,7 @@ arXiv preprint arXiv:2411.16200 (2024).
 ```
 @article{Liu2024NNHiSD,
   title={Neural Network-based High-index Saddle Dynamics Method for Searching Saddle Points and Solution Landscape},
-  author={Yuankai Liu, Lei Zhang, Jin Zhao},
+  author={Yuankai Liu and Lei Zhang and Jin Zhao},
   journal={arXiv preprint arXiv:2411.16200},
   year={2024}}
 ```
