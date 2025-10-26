@@ -70,15 +70,16 @@ NN-HiSD, a method which utilizes a neural network surrogate model to approximate
 
 **Important:** All commands below should be run from the root directory of the project.
 
-## Example 1: Simple 2D/3D Model
+### Example 1: Simple 2D/3D Model
 
 This example demonstrates the core functionality on simple 2D and 3D potentials.
 
 1. **Train the Surrogate Model:**
+   
    ```bash
    python train.py examples/ex1_simple/simple2d.json
    ```
-
+   
 2. **Analyze Surrogate Quality:**
    Calculate and plot order-1 and order-2 derivative differences over training epochs.
    
@@ -127,7 +128,7 @@ This example demonstrates the core functionality on simple 2D and 3D potentials.
      
 ---
 
-## Example 2: Muller-Brown Potential
+### Example 2: Muller-Brown Potential
 
 This example analyzes neural network surrogate models for Muller-Brown potential systems.
 
@@ -197,25 +198,25 @@ This example demonstrates surrogate model performance with varying training data
 
 ---
 
-## Example 4: Alanine Dipeptide
+### Example 4: Alanine Dipeptide
 
 This example demonstrates the application of NN-HiSD to molecular dynamics simulations using NAMD for the alanine dipeptide system, a standard benchmark for biomolecular simulations.
 
-### Prerequisites
+#### Prerequisites
 To reproduce the data generation and comparative analyses, NAMD must be installed. Please download and install NAMD from the official website: https://www.ks.uiuc.edu/Research/namd/.
 
-### 1. Generate Training Data
+#### 1. Generate Training Data
 Molecular dynamics simulations can be performed using NAMD to generate training data. Alternatively, precomputed data is available in the `examples/ex4_nanma/vacuum.pmf` file for immediate use.
 
 ```bash
-D:\lyk\lyk\NAMD_2.14_Win64-multicore\NAMD_2.14_Win64-multicore/namd2 +p32 ./examples/ex4_nanma/MDparams/nnhisd/vacuum.conf > ./examples/ex4_nanma/MDparams/nnhisd/vacuum.log
+/path/to/NAMD/namd2 +p32 ./examples/ex4_nanma/MDparams/nnhisd/vacuum.conf > ./examples/ex4_nanma/MDparams/nnhisd/vacuum.log
 
 copy ./examples/ex4_nanma/MDparams/nnhisd/output/vacuum.pmf ./examples/ex4_nanma
 ```
 
 **Note:** Replace `/path/to/NAMD` with the actual installation path of NAMD on your system.
 
-### 2. Train the Neural Network Surrogate Model
+#### 2. Train the Neural Network Surrogate Model
 
 ```bash
 python examples/ex4_nanma/training.py
@@ -223,7 +224,7 @@ python examples/ex4_nanma/training.py
 
 This script trains a neural network surrogate model based on the PMF data, optimizing to accurately approximate both the energy landscape and its derivatives.
 
-### 3. Calculate Saddle Points
+#### 3. Calculate Saddle Points
 
 ```bash
 python examples/ex4_nanma/saddle.py
@@ -231,7 +232,7 @@ python examples/ex4_nanma/saddle.py
 
 This command applies the HiSD algorithm to the trained surrogate model to identify and characterize saddle points in the energy landscape.
 
-### 4. Visualization
+#### 4. Visualization
 Generate visual representations of the energy landscape and solution landscape:
 
 ```bash
@@ -239,7 +240,7 @@ python examples/ex4_nanma/energy.py     # Visualize energy landscape
 python examples/ex4_nanma/tree.py       # Visualize solution landscape
 ```
 
-### 5. Comparative Analyses
+#### 5. Comparative Analyses
 Perform comparative analyses with alternative approaches:
 
 - **Original HiSD with Finite Difference Gradients:**
@@ -257,7 +258,7 @@ Perform comparative analyses with alternative approaches:
 
 ---
 
-## Example 5: Bacterial Ribosomal Assembly Intermediates
+### Example 5: Bacterial Ribosomal Assembly Intermediates
 
 This example analyzes experimental bacterial system data using surrogate models.
 
