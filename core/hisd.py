@@ -62,6 +62,7 @@ def hisd(grad, w0, v0=None, method='sirqit', dt=1e-7, momentum=0.0,
     D = w.shape[0]
     tau = 0.5
 
+    # Initialize v if k > 0
     if k > 0:
         if v0 is not None:
             v = copy.deepcopy(v0)
@@ -71,6 +72,7 @@ def hisd(grad, w0, v0=None, method='sirqit', dt=1e-7, momentum=0.0,
             v = v.reshape(-1, 1)
 
     for j in range(1, max_iter + 1):
+        # Whether to use Nesterov acceleration
         if nesterov:
             j0 = j % restart
             gamma_j = j0 / (j0+3)
@@ -85,6 +87,7 @@ def hisd(grad, w0, v0=None, method='sirqit', dt=1e-7, momentum=0.0,
         else:
             dw = dt * g
 
+        # Update w_temp with momentum
         w_temp = w_temp - dw + momentum * (w - w_pre)
         w_pre = w
         w = w_temp
@@ -110,8 +113,8 @@ def hisd(grad, w0, v0=None, method='sirqit', dt=1e-7, momentum=0.0,
             if j == 1: w_record = []
             w_record.append(w.reshape(-1, ))
 
-        if 'Stopping' in kwargs and np.linalg.norm(g) < 1e-8:
-            break 
+        # if 'Stopping' in kwargs and np.linalg.norm(g) < 1e-8:
+        #     break 
 
     if report:
         return w, w_record

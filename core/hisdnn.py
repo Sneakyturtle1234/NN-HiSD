@@ -26,9 +26,25 @@ def hisdnn(model, w0, v0=None, dt=1e-7, momentum=0.0, max_iter=10,
         Momentum factor.
     max_iter : int, default=10
         Maximum number of iterations.
+    nesterov : bool, default=False
+        Whether to use Nesterov momentum.
+    restart : int, default=50
+        Restart frequency for Nesterov momentum.
+    ADAD: bool, default=False 
+        Use ADAD or dimer method to calculate the Hessian matrix 
     k : int, default=0
-        Morse index of the saddle point to find (0 for minima).
-    
+        Morse index of the saddle point to find (0 for minima, positive for saddle points).
+    L : float, default=1e-3
+        Step size of dimer method.
+    report : bool, default=True
+        Whether to report progress during optimization.
+    initial_hessian : str, default='full_hessian'
+        Method to compute the initial Hessian.
+    step_interval : int, default=1
+        Interval at which to report progress.
+    **kwargs : dict
+        Additional parameters.
+
     Returns
     -------
     tuple
@@ -38,7 +54,9 @@ def hisdnn(model, w0, v0=None, dt=1e-7, momentum=0.0, max_iter=10,
     w_pre = copy.deepcopy(w0)
     D = w.shape[0]
     tau = 0.5
+    w_record = []
 
+    # Initialize v if k > 0
     if k > 0:
         if v0 is not None:
             v = copy.deepcopy(v0)
@@ -47,15 +65,16 @@ def hisdnn(model, w0, v0=None, dt=1e-7, momentum=0.0, max_iter=10,
         if v.ndim == 1:
             v = v.reshape(-1, 1)
 
-    w_record = []
     for j in range(1, max_iter + 1):
+        # Whether to use Nesterov acceleration
         if nesterov:
             j0 = j % restart
             gamma_j = j0 / (j0+3)
             w_temp = w + gamma_j * (w - w_pre)
         else:
             w_temp = w
-
+        
+        # Compute gradient using AD
         x = torch.tensor(w_temp, dtype=torch.float64, requires_grad=True)
         outputs = model(x)
         grad_outputs = torch.ones_like(outputs)
@@ -66,6 +85,7 @@ def hisdnn(model, w0, v0=None, dt=1e-7, momentum=0.0, max_iter=10,
         else:
             dw = dt * g
 
+        # Update w using momentum
         w_temp = w_temp - dw + momentum * (w - w_pre)
         w_pre = w
         w = w_temp

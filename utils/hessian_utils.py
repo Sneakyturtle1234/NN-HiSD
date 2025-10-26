@@ -48,6 +48,34 @@ def given_eigenvector(grad, w, L, D, k):
 
 
 def sirqit(grad, w, v, maxiter=10, ds=1e-7, L=1e-3):
+    """
+    Subspace Iteration with Rayleigh Quotient and Inverse Iteration for eigenvector refinement.
+    
+    This function refines a set of eigenvectors corresponding to the smallest eigenvalues
+    of the Hessian matrix using an iterative subspace method.
+    
+    Parameters
+    ----------
+    grad : function
+        Function to compute the gradient of the energy function.
+    w : numpy.ndarray
+        Current parameter vector at which to compute the Hessian.
+    v : numpy.ndarray
+        Initial eigenvectors to refine.
+    maxiter : int, default=10
+        Maximum number of refinement iterations.
+    ds : float, default=1e-7
+        Step size for the iteration.
+    L : float, default=1e-3
+        Regularization parameter.
+    ADAD : bool, default=True
+        Whether to use automatic differentiation for Hessian calculations.
+    
+    Returns
+    -------
+    numpy.ndarray
+        Refined eigenvectors after subspace iteration.
+    """
     for _ in range(maxiter):
         hv = batch_hessian_vector_product(grad, w, v, L)
         coef = np.triu(v.T @ hv)
@@ -57,6 +85,30 @@ def sirqit(grad, w, v, maxiter=10, ds=1e-7, L=1e-3):
 
 
 def lobpcg(grad, w, v0, max_iter=10, L=1e-3):
+    """
+    Locally Optimal Block Preconditioned Conjugate Gradient method for finding smallest eigenvalues.
+    
+    This function finds the smallest eigenvalues and corresponding eigenvectors of the Hessian matrix
+    using the LOBPCG method with hessian-vector product calculations.
+    
+    Parameters
+    ----------
+    grad : function
+        Function to compute the gradient of the energy function.
+    w : numpy.ndarray
+        Current parameter vector at which to compute the Hessian.
+    v0 : numpy.ndarray
+        Initial guess for the eigenvectors.
+    max_iter : int, default=10
+        Maximum number of iterations for the LOBPCG algorithm.
+    L : float, default=1e-3
+        Regularization parameter for hessian calculation.
+    
+    Returns
+    -------
+    tuple
+        Tuple containing (eigenvalues, eigenvectors)
+    """
     n = v0.shape[0]
     matvec_fun = lambda z: single_hessian_vector_product(grad, w, z, L)
     matmat_fun = lambda z: batch_hessian_vector_product(grad, w, z, L)

@@ -39,9 +39,11 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
     list
         List of training loss values.
     """
+    # Use GPU acceleration if possible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using device:", device)
     
+    # Set random seed for reproducibility
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -51,6 +53,7 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False 
     
+    # Load pre-trained model if exists
     if os.path.exists(model_path):
         try:
             model_info = torch.load(model_path)
@@ -71,9 +74,12 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
         print(f"Model configuration - Input size: {np.shape(data)[-1]}, "
                     f"Layers: {layer}, " f"Output size: {1}")
 
+    # Set up loss function, optimizer, and learning rate scheduler
     criterion = nn.MSELoss()
     optimizer = optim.Adam(net.parameters(), lr=learning_rate, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=2000, gamma=0.7)
+    
+    # Move model, data, and target to GPU if available
     net.to(device)
     data, target = torch.tensor(data, dtype=torch.float64), torch.tensor(target, dtype=torch.float64)
     if len(target.shape) == 1:
@@ -90,6 +96,7 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
             optimizer.zero_grad()
             outputs = net(inputs)
             if grad_data:
+                # Gradient information for custom loss
                 part_indices = labels[:, 1] == 1    
                 actual_grad = labels[part_indices, 2:labels.size()[-1]]
                 labels = labels[:, 0].unsqueeze(-1)
@@ -105,6 +112,7 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
             optimizer.step()
         scheduler.step()
 
+        # Record training loss
         if grad_output and epoch % report_interval == 0:
             net.to('cpu')
             result = calculate_derivatives(net)
@@ -118,6 +126,7 @@ def trainer(data, target, model_path, layer, learning_rate=1e-3, seed=42,
 
     net.to('cpu')
     
+    # Save model with structure information
     model_info = {
         'model_type': 'DNN',
         'input_size': np.shape(data)[-1],
