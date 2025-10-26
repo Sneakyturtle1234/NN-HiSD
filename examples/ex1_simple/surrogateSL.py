@@ -6,11 +6,11 @@ import sys
 sys.path.append(".../..")
 import core, utils
 
-w0 = np.array([6.61, 3.26, 5.92])
+w0 = np.array([6, 1, 6])
 
 k = 0
-steps = 5000
-dt = 1e-4
+steps = 10000
+dt = 1e-2
 alpha = 6
 
 dir = os.path.dirname(os.path.abspath(__file__))
@@ -34,6 +34,6 @@ for i in range(20):
     w_saddle, _ = core.hisdnn(model=model1, w0=w, v0=None, method='sirqit',
                          dt=dt, ds=dt, max_iter=steps, k=k,
                          report=True, initial_hessian='full_hessian',
-                         sub_iter=1, momentum=0.0, step_interval=10000)
+                         sub_iter=1, momentum=0.0, step_interval=5000)
     if (-1 < w_saddle[0] < 7) & (-1 < w_saddle[1] < 7) & (-1 < w_saddle[2] < 7):
         print(f"[{w_saddle[0]:.2f}, {w_saddle[1]:.2f}, {w_saddle[2]:.2f}]")
