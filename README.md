@@ -81,25 +81,44 @@ This example demonstrates the core functionality on simple 2D and 3D potentials.
 
 2. **Analyze Surrogate Quality:**
    Calculate and plot order-1 and order-2 derivative differences over training epochs.
+   
    ```bash
    python examples/ex1_simple/epsilons_calculate.py
    ```
-
+   
 3. **Run HiSD and Compare Trajectories:**
    Visualize optimization paths on both exact and surrogate models.
+   
    ```bash
    python examples/ex1_simple/traj.py
    ```
-
+   
 4. **Additional Analyses:**
-   - Compare dimer method vs. AD for Hessian calculation: `python examples/ex1_simple/diff.py`
-   - Test robustness with Gaussian noise in training data: `python examples/ex1_simple/addnoise.py`
-   - Train for 3D potential: `python train.py examples/ex1_simple/parametric3d.json`
+   
+   - Compare dimer method vs. AD for Hessian calculation: 
+   
+     ```bash
+     python examples/ex1_simple/diff.py
+     ```
+   
+   - Test robustness with Gaussian noise in training data: 
+   
+   - ```bash
+     python examples/ex1_simple/addnoise.py
+     ```
+   
+   - Train for 3D potential: 
+   
+   - ```bash
+     python train.py examples/ex1_simple/parametric3d.json
+     ```
+   
    - Run HiSD for 3D model (α=3, α=7):
      ```bash
      python examples/ex1_simple/exactSL.py
      python examples/ex1_simple/surrogateSL.py
      ```
+     
    - Plot solution landscape for 3D model:
      ```bash
      python examples/ex1_simple/tree1.py
@@ -132,7 +151,12 @@ This example analyzes neural network surrogate models for Muller-Brown potential
    ```
 
 4. **Additional Analyses:**
-   - Compare HiSD parameters: `python examples/ex2_mb/mbdiff.py`
+   - Compare HiSD parameters: 
+   
+     ```bash
+     python examples/ex2_mb/mbdiff.py
+     ```
+   
    - Modified Muller-Brown potential:
      ```bash
      python train.py examples/ex2_mb/mmb.json
@@ -152,13 +176,24 @@ This example demonstrates surrogate model performance with varying training data
 
 2. **Calculate Saddle Points:**
    Analyze performance with different numbers of training points.
+   
    ```bash
    python examples/ex3_rosenbrock/rosennum.py
    ```
-
+   
 3. **Additional Analyses:**
-   - Compare HiSD parameters: `python examples/ex3_rosenbrock/diff.py`
-   - Gaussian Process Regression comparison (10k points): `python examples/ex3_rosenbrock/GPR.py`
+   
+   - Compare HiSD parameters: 
+   
+     ```bash
+     python examples/ex3_rosenbrock/diff.py
+     ```
+   
+   - Gaussian Process Regression comparison (10k points): 
+   
+     ```bash
+     python examples/ex3_rosenbrock/GPR.py
+     ```
 
 ---
 
@@ -173,7 +208,7 @@ To reproduce the data generation and comparative analyses, NAMD must be installe
 Molecular dynamics simulations can be performed using NAMD to generate training data. Alternatively, precomputed data is available in the `examples/ex4_nanma/vacuum.pmf` file for immediate use.
 
 ```bash
-/path/to/NAMD/namd2 +p32 ./examples/ex4_nanma/MDparams/nnhisd/vacuum.conf > ./examples/ex4_nanma/MDparams/nnhisd/vacuum.log
+D:\lyk\lyk\NAMD_2.14_Win64-multicore\NAMD_2.14_Win64-multicore/namd2 +p32 ./examples/ex4_nanma/MDparams/nnhisd/vacuum.conf > ./examples/ex4_nanma/MDparams/nnhisd/vacuum.log
 
 copy ./examples/ex4_nanma/MDparams/nnhisd/output/vacuum.pmf ./examples/ex4_nanma
 ```
@@ -208,6 +243,7 @@ python examples/ex4_nanma/tree.py       # Visualize solution landscape
 Perform comparative analyses with alternative approaches:
 
 - **Original HiSD with Finite Difference Gradients:**
+  
   ```bash
   python examples/ex4_nanma/original.py /path/to/NAMD/
   ```

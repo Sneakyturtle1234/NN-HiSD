@@ -1,0 +1,837 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode: 32 threads (PEs)
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Charm++ warning> fences and atomic operations not available in native assembly
+Converse/Charm++ Commit ID: v6.10.2-0-g7bf00fa-namd-charm-6.10.2-build-2020-Aug-05-556
+Charm++> Disabling isomalloc because mmap() does not work.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 hosts (1 sockets x 14 cores x 1 PUs = 20-way SMP)
+Charm++> cpu topology info is gathered in 0.003 seconds.
+Info: NAMD 2.14 for Win64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Chem. Phys. 153:044130 (2020) doi:10.1063/5.0014475
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 61002 for multicore-win64
+Info: Built Wed, Aug 05, 2020 1:08:15 PM by jim on europa
+Info: Running on 32 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.023 s
+CkLoopLib is used in SMP with simple dynamic scheduling (converse-level notification)
+Info: 10.0117 MB of memory in use based on GetProcessMemoryInfo
+Info: Configuration file is ./MDparams/hisd/vacuum.conf
+Info: Changed directory to ./MDparams/hisd
+TCL: Suspending until startup complete.
+Warning: The following variables were set in the
+Warning: configuration file but will be ignored:
+Warning:    switchdist (switching)
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               1
+Info: NUMBER OF STEPS        300000
+Info: STEPS PER CYCLE        16
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             3200 steps
+Info: FIRST LDB TIMESTEP     80
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: VELOCITY FILE          minvac_0.vel
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: DCD FILENAME           output/vacuum.dcd
+Info: DCD FREQUENCY          5000
+Info: DCD FIRST STEP         5000
+Info: DCD FILE WILL CONTAIN UNIT CELL DATA
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        output/vacuum
+Info: RESTART FILENAME       output/vacuum
+Info: RESTART FREQUENCY      5000
+Info: BINARY RESTART FILES WILL BE USED
+Info: CUTOFF                 20
+Info: PAIRLIST DISTANCE      22
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 1
+Info: HYDROGEN GROUP CUTOFF  2.8
+Info: PATCH DIMENSION        25.8
+Info: ENERGY OUTPUT STEPS    5000
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    5000
+Info: COLLECTIVE VARIABLES CALCULATION REQUESTED
+Info: COLLECTIVE VARIABLES CONFIGURATION   vacuum.in
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   300
+Info: LANGEVIN USING BBK INTEGRATOR
+Info: LANGEVIN DAMPING COEFFICIENT IS 10 INVERSE PS
+Info: LANGEVIN DYNAMICS APPLIED TO HYDROGENS
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RANDOM NUMBER SEED     1761464315
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         minvac_0.coor
+Info: STRUCTURE FILE         vacuum.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             par_all22_prot.inp
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: SUMMARY OF PARAMETERS:
+Info: 139 BONDS
+Info: 345 ANGLES
+Info: 452 DIHEDRAL
+Info: 43 IMPROPER
+Info: 0 CROSSTERM
+Info: 90 VDW
+Info: 0 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 0
+Info: Reading pdb file minvac_0.coor
+Info: TIME FOR READING PDB FILE: 0.00800014
+Info: 
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 22 ATOMS
+Info: 21 BONDS
+Info: 36 ANGLES
+Info: 41 DIHEDRALS
+Info: 4 IMPROPERS
+Info: 0 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 66 DEGREES OF FREEDOM
+Info: 10 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 10 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 144.174 amu
+Info: TOTAL CHARGE = 2.23517e-08 e
+Info: *****************************
+Info: 
+Info: Entering startup at 0.05 s, 14.2773 MB of memory in use
+Info: Startup phase 0 took 0.000999928 s, 14.2813 MB of memory in use
+Info: ADDED 98 IMPLICIT EXCLUSIONS
+Info: Startup phase 1 took 0 s, 14.3203 MB of memory in use
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 833 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000290475 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE FORCE: 1.92593e-32 AT 19.9984
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE FORCE: 7.75482e-26 AT 19.9984
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+Info: Startup phase 2 took 0.000999928 s, 14.9648 MB of memory in use
+Info: Startup phase 3 took 0.00100017 s, 14.9648 MB of memory in use
+Info: Startup phase 4 took 0 s, 14.9648 MB of memory in use
+Info: Startup phase 5 took 0.000999928 s, 14.9648 MB of memory in use
+Info: ORIGINAL ATOMS MINMAX IS -2.775 -0.295 -4.554  2.412 4.42 1.309
+Info: ADJUSTED ATOMS MINMAX IS -3.01563 -0.32375 -4.94125  2.30062 4.19375 1.87125
+Info: PATCH GRID IS 1 BY 1 BY 1
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: REMOVING COM VELOCITY 0 0 0
+Info: LARGEST PATCH (0) HAS 22 ATOMS
+Info: TORUS A SIZE 1 USING 0
+Info: TORUS B SIZE 1 USING 0
+Info: TORUS C SIZE 1 USING 0
+Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
+Info: Placed 100% of base nodes on same physical node as patch
+Info: Startup phase 6 took 0.00600004 s, 15.0195 MB of memory in use
+Info: Startup phase 7 took 0 s, 15.0195 MB of memory in use
+Info: Startup phase 8 took 0 s, 15.0195 MB of memory in use
+Info: Startup phase 9 took 0.000999928 s, 15.0195 MB of memory in use
+Info: Startup phase 10 took 0 s, 15.0195 MB of memory in use
+Info: Startup phase 11 took 0.00100017 s, 15.0195 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 12 took 0 s, 15.0352 MB of memory in use
+Info: CREATING 12 COMPUTE OBJECTS
+colvars: ----------------------------------------------------------------------
+colvars: Initializing the collective variables module, version "2020-07-07".
+colvars: Please cite Fiorin et al, Mol Phys 2013:
+colvars:  https://dx.doi.org/10.1080/00268976.2013.813594
+colvars: in any publication based on this calculation.
+colvars: SMP parallelism is enabled; if needed, use "smp off" to override this.
+colvars: This version was built without the C++11 standard: some features are disabled.
+colvars: Please see the following link for details:
+colvars: https://colvars.github.io/README-c++11.html
+colvars: Using NAMD interface, version "2020-05-04".
+colvars: ----------------------------------------------------------------------
+colvars: Reading new configuration from file "vacuum.in":
+colvars: # units = "" [default]
+colvars: # smp = on [default]
+colvars: # colvarsTrajFrequency = 500
+colvars: # colvarsRestartFrequency = 500
+colvars: # scriptedColvarForces = off [default]
+colvars: # scriptingAfterBiases = off [default]
+colvars: ----------------------------------------------------------------------
+colvars:   Initializing a new collective variable.
+colvars:   # name = "phi"
+colvars:   Initializing a new "dihedral" component.
+colvars:     # name = "" [default]
+colvars:     # componentCoeff = 1 [default]
+colvars:     # componentExp = 1 [default]
+colvars:     # period = 0 [default]
+colvars:     # wrapAround = 0 [default]
+colvars:     # forceNoPBC = off [default]
+colvars:     # scalable = on [default]
+colvars:       Initializing atom group "group1".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group1".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group1" defined with 1 atoms requested: total mass = 12.011, total charge = 0.51.
+colvars:       Initializing atom group "group2".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group2".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group2" defined with 1 atoms requested: total mass = 14.007, total charge = -0.47.
+colvars:       Initializing atom group "group3".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group3".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group3" defined with 1 atoms requested: total mass = 12.011, total charge = 0.07.
+colvars:       Initializing atom group "group4".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group4".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group4" defined with 1 atoms requested: total mass = 12.011, total charge = 0.51.
+colvars:     # oneSiteSystemForce = off [default]
+colvars:     # oneSiteTotalForce = on
+colvars:     Computing total force on group 1 only
+colvars:   All components initialized.
+colvars:   # timeStepFactor = 1 [default]
+colvars:   # width = 5
+colvars:   # lowerBoundary = -259.82
+colvars:   # upperBoundary = 100.18
+colvars:   # hardLowerBoundary = off [default]
+colvars:   # hardUpperBoundary = off [default]
+colvars:   # expandBoundaries = off [default]
+colvars:   # extendedLagrangian = off [default]
+colvars:   # outputValue = on [default]
+colvars:   # outputVelocity = off [default]
+colvars:   # outputTotalForce = off [default]
+colvars:   # outputAppliedForce = off [default]
+colvars:   # subtractAppliedForce = off [default]
+colvars:   # runAve = off [default]
+colvars:   # corrFunc = off [default]
+colvars: ----------------------------------------------------------------------
+colvars:   Initializing a new collective variable.
+colvars:   # name = "psi"
+colvars:   Initializing a new "dihedral" component.
+colvars:     # name = "" [default]
+colvars:     # componentCoeff = 1 [default]
+colvars:     # componentExp = 1 [default]
+colvars:     # period = 0 [default]
+colvars:     # wrapAround = 0 [default]
+colvars:     # forceNoPBC = off [default]
+colvars:     # scalable = on [default]
+colvars:       Initializing atom group "group1".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group1".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group1" defined with 1 atoms requested: total mass = 14.007, total charge = -0.47.
+colvars:       Initializing atom group "group2".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group2".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group2" defined with 1 atoms requested: total mass = 12.011, total charge = 0.51.
+colvars:       Initializing atom group "group3".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group3".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group3" defined with 1 atoms requested: total mass = 12.011, total charge = 0.07.
+colvars:       Initializing atom group "group4".
+colvars:       # name = "" [default]
+colvars:       # centerReference = off [default]
+colvars:       # rotateReference = off [default]
+colvars:       # atomsOfGroup = "" [default]
+colvars:       # indexGroup = "" [default]
+colvars:       # psfSegID =  [default]
+colvars:       # atomsFile = "" [default]
+colvars:       # dummyAtom = ( 0 , 0 , 0 ) [default]
+colvars:       # enableForces = on [default]
+colvars:       # enableFitGradients = on [default]
+colvars:       Enabling scalable calculation for group "group4".
+colvars:       # printAtomIDs = off [default]
+colvars:       Atom group "group4" defined with 1 atoms requested: total mass = 14.007, total charge = -0.47.
+colvars:     # oneSiteSystemForce = off [default]
+colvars:     # oneSiteTotalForce = on
+colvars:     Computing total force on group 1 only
+colvars:   All components initialized.
+colvars:   # timeStepFactor = 1 [default]
+colvars:   # width = 5
+colvars:   # lowerBoundary = -105
+colvars:   # upperBoundary = 255
+colvars:   # hardLowerBoundary = off [default]
+colvars:   # hardUpperBoundary = off [default]
+colvars:   # expandBoundaries = off [default]
+colvars:   # extendedLagrangian = off [default]
+colvars:   # outputValue = on [default]
+colvars:   # outputVelocity = off [default]
+colvars:   # outputTotalForce = off [default]
+colvars:   # outputAppliedForce = off [default]
+colvars:   # subtractAppliedForce = off [default]
+colvars:   # runAve = off [default]
+colvars:   # corrFunc = off [default]
+colvars: ----------------------------------------------------------------------
+colvars: Collective variables initialized, 2 in total.
+colvars: ----------------------------------------------------------------------
+colvars:   Initializing a new "metadynamics" instance.
+colvars:   # name = "metadynamics1" [default]
+colvars:   # colvars = { phi, psi }
+colvars:   # stepZeroData = off [default]
+colvars:   # outputEnergy = off [default]
+colvars:   # outputFreq = 500 [default]
+colvars:   # timeStepFactor = 1 [default]
+colvars:   # writeTISamples = off [default]
+colvars:   # writeTIPMF = off [default]
+colvars:   # hillWeight = 0.5
+colvars:   # newHillFrequency = 1000 [default]
+colvars:   # gaussianSigmas =  [default]
+colvars:   # hillWidth = 15
+colvars:   Half-widths of the Gaussian hills (sigma's):
+colvars:   phi: 37.5
+colvars:   psi: 37.5
+colvars:   # multipleReplicas = off [default]
+colvars:   # useGrids = on [default]
+colvars:   # gridsUpdateFrequency = 1000 [default]
+colvars:   # rebinGrids = off [default]
+colvars:   # writeFreeEnergyFile = on [default]
+colvars:   # keepHills = off [default]
+colvars:   # keepFreeEnergyFiles = off [default]
+colvars:   # writeHillsTrajectory = off [default]
+colvars:   # wellTempered = off [default]
+colvars:   # biasTemperature = -1 [default]
+colvars:   # ebMeta = off [default]
+colvars: ----------------------------------------------------------------------
+colvars: Collective variables biases initialized, 1 in total.
+colvars: ----------------------------------------------------------------------
+colvars: Collective variables module (re)initialized.
+colvars: ----------------------------------------------------------------------
+colvars: Updating NAMD interface:
+colvars: updating atomic data (0 atoms).
+colvars: updating group data (5 scalable groups, 5 atoms in total).
+colvars: updating grid object data (0 grid objects in total).
+colvars: Re-initialized atom group for variable "phi":0/0. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "phi":0/1. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: Re-initialized atom group for variable "phi":0/2. 1 atoms: total mass = 12.011, total charge = 0.07.
+colvars: Re-initialized atom group for variable "phi":0/3. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "psi":0/0. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: Re-initialized atom group for variable "psi":0/1. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "psi":0/2. 1 atoms: total mass = 12.011, total charge = 0.07.
+colvars: Re-initialized atom group for variable "psi":0/3. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: The restart output state file will be "output/vacuum.colvars.state".
+colvars: The final output state file will be "output/vacuum.colvars.state".
+colvars: Opening trajectory file "output/vacuum.colvars.traj".
+colvars: Redefining the Tcl "cv" command to the new script interface.
+Info: Startup phase 13 took 0.00299978 s, 15.3555 MB of memory in use
+Info: useSync: 0 useProxySync: 0
+Info: Startup phase 14 took 0.00100017 s, 15.3555 MB of memory in use
+Info: Startup phase 15 took 0 s, 15.5 MB of memory in use
+Info: Finished startup at 0.066 s, 15.6367 MB of memory in use
+
+colvars: Updating NAMD interface:
+colvars: updating atomic data (0 atoms).
+colvars: updating group data (5 scalable groups, 5 atoms in total).
+colvars: updating grid object data (0 grid objects in total).
+colvars: Re-initialized atom group for variable "phi":0/0. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "phi":0/1. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: Re-initialized atom group for variable "phi":0/2. 1 atoms: total mass = 12.011, total charge = 0.07.
+colvars: Re-initialized atom group for variable "phi":0/3. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "psi":0/0. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: Re-initialized atom group for variable "psi":0/1. 1 atoms: total mass = 12.011, total charge = 0.51.
+colvars: Re-initialized atom group for variable "psi":0/2. 1 atoms: total mass = 12.011, total charge = 0.07.
+colvars: Re-initialized atom group for variable "psi":0/3. 1 atoms: total mass = 14.007, total charge = -0.47.
+colvars: The restart output state file will be "output/vacuum.colvars.state".
+colvars: The final output state file will be "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG
+
+ENERGY:       0         0.6388         2.0333         2.5224         0.0203            -15.7436        -0.8467         0.0000         0.0000         0.0000            -11.3755         0.0000       -11.3755       -11.3740         0.0000
+
+LDB: ============= START OF LOAD BALANCING ============== 0.069
+LDB: ============== END OF LOAD BALANCING =============== 0.069
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.069
+LDB: ============= START OF LOAD BALANCING ============== 0.076
+LDB: 6 computes have load of zero
+LDB: Partitioning computes with target load 0.000000
+LDB: Increased migratable compute count from 0 to 0
+LDB: Largest unpartitionable compute is 0.000000
+LDB: ============== END OF LOAD BALANCING =============== 0.0769999
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.079
+Info: Initial time: 32 CPUs 0.000112501 s/step 0.00130209 days/ns 15.8242 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 0.0809999
+LDB: ============== END OF LOAD BALANCING =============== 0.0809999
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.0809999
+LDB: ============= START OF LOAD BALANCING ============== 0.0869999
+LDB: 6 computes have load of zero
+LDB: TIME 0.0869999 LOAD: AVG 0.00162511 MAX 0.00300026  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 15.8945 MB
+LDB: TIME 0.0869999 LOAD: AVG 0.00162511 MAX 0.00300026  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 TorusLB MEM: 15.8945 MB
+LDB: ============== END OF LOAD BALANCING =============== 0.0869999
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.089
+Info: Initial time: 32 CPUs 9.99987e-05 s/step 0.00115739 days/ns 15.8984 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 0.096
+LDB: 6 computes have load of zero
+LDB: TIME 0.096 LOAD: AVG 0.000593722 MAX 0.00399971  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 15.9375 MB
+LDB: TIME 0.096 LOAD: AVG 0.000593722 MAX 0.00399971  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 15.9375 MB
+LDB: TIME 0.096 LOAD: AVG 0.000593722 MAX 0.00399971  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 15.9375 MB
+LDB: ============== END OF LOAD BALANCING =============== 0.096
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.0979998
+Info: Initial time: 32 CPUs 8.74996e-05 s/step 0.00101273 days/ns 15.9727 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 0.104
+LDB: 4 computes have load of zero
+LDB: Largest compute 8 load 0.001000 is 200.0% of average load 0.000500
+LDB: Average compute 0.001000 is 200.0% of average load 0.000500
+LDB: TIME 0.104 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 16.043 MB
+LDB: TIME 0.104 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 16.043 MB
+LDB: TIME 0.104 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 16.043 MB
+LDB: ============== END OF LOAD BALANCING =============== 0.104
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.106
+Info: Benchmark time: 32 CPUs 7.50005e-05 s/step 0.000868062 days/ns 16.1016 MB memory
+Info: Benchmark time: 32 CPUs 7.50005e-05 s/step 0.000868062 days/ns 16.1992 MB memory
+Info: Benchmark time: 32 CPUs 7.50005e-05 s/step 0.000868062 days/ns 16.2227 MB memory
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+Info: Benchmark time: 32 CPUs 0.000237498 s/step 0.00274882 days/ns 16.5547 MB memory
+Info: Benchmark time: 32 CPUs 6.25014e-05 s/step 0.000723396 days/ns 16.5547 MB memory
+Info: Benchmark time: 32 CPUs 8.74996e-05 s/step 0.00101273 days/ns 16.5547 MB memory
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 0.464
+LDB: ============== END OF LOAD BALANCING =============== 0.464
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.464
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 0.486
+LDB: 6 computes have load of zero
+LDB: TIME 0.487 LOAD: AVG 0.00156245 MAX 0.0190003  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.0703 MB
+LDB: TIME 0.487 LOAD: AVG 0.00156245 MAX 0.0190003  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.0703 MB
+LDB: TIME 0.487 LOAD: AVG 0.00156245 MAX 0.0190003  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.0703 MB
+LDB: ============== END OF LOAD BALANCING =============== 0.487
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.488
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+OPENING COORDINATE DCD FILE
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 5000
+WRITING COORDINATES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=5000) takes 0.001 seconds, 17.168 MB of memory in use
+TIMING: 5000  CPU: 0.587, 0.000117/step  Wall: 0.587, 0.000117/step, 0.0095875 hours remaining, 17.167969 MB of memory in use.
+ENERGY:    5000         6.6301         8.8751         4.6222         1.0391            -18.1682        -0.0543         0.0000         1.2658        16.0400             20.2498       244.5970         4.2098        20.6038       298.0982
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 5000
+WRITING VELOCITIES TO RESTART FILE AT STEP 5000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=5000) takes 0.000 seconds, 17.168 MB of memory in use
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 0.831
+LDB: ============== END OF LOAD BALANCING =============== 0.831
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.831
+LDB: ============= START OF LOAD BALANCING ============== 0.837
+LDB: 5 computes have load of zero
+LDB: Largest compute 9 load 0.001000 is 177.8% of average load 0.000562
+LDB: Average compute 0.001000 is 177.8% of average load 0.000562
+LDB: TIME 0.838 LOAD: AVG 0.000562496 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.0391 MB
+LDB: TIME 0.838 LOAD: AVG 0.000562496 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.0391 MB
+LDB: TIME 0.838 LOAD: AVG 0.000562496 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.0391 MB
+LDB: ============== END OF LOAD BALANCING =============== 0.838
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 0.839
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 1.158
+LDB: ============== END OF LOAD BALANCING =============== 1.158
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.159
+LDB: ============= START OF LOAD BALANCING ============== 1.164
+LDB: 6 computes have load of zero
+LDB: TIME 1.165 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2539 MB
+LDB: TIME 1.165 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: TIME 1.165 LOAD: AVG 0.000500008 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: ============== END OF LOAD BALANCING =============== 1.165
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.166
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 10000
+WRITING COORDINATES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=10000) takes 0.000 seconds, 17.133 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 10000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=10000) takes 0.002 seconds, 17.133 MB of memory in use
+TIMING: 10000  CPU: 1.126, 0.0001078/step  Wall: 1.126, 0.0001078/step, 0.00868389 hours remaining, 17.132813 MB of memory in use.
+ENERGY:   10000         9.9119        13.9427         4.6622         1.6690            -23.1096        -1.0372         0.0000         2.2432        22.2622             30.5443       339.4808         8.2820        30.4237       304.5314
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 10000
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 1.511
+LDB: ============== END OF LOAD BALANCING =============== 1.512
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.512
+LDB: ============= START OF LOAD BALANCING ============== 1.517
+LDB: 6 computes have load of zero
+LDB: TIME 1.518 LOAD: AVG 0.00037501 MAX 0.00300026  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2188 MB
+LDB: TIME 1.518 LOAD: AVG 0.00037501 MAX 0.00300026  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2188 MB
+LDB: TIME 1.518 LOAD: AVG 0.00037501 MAX 0.00300026  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2188 MB
+LDB: ============== END OF LOAD BALANCING =============== 1.518
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.519
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 15000
+WRITING COORDINATES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=15000) takes 0.000 seconds, 17.133 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 15000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=15000) takes 0.000 seconds, 17.133 MB of memory in use
+TIMING: 15000  CPU: 1.671, 0.000109/step  Wall: 1.67, 0.0001088/step, 0.00861333 hours remaining, 17.132813 MB of memory in use.
+ENERGY:   15000        12.1209         5.4884         3.7994         1.8921            -17.2563         0.2874         0.0000         2.1636        18.2159             26.7114       277.7768         8.4955        27.1836       296.9148
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 15000
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 1.861
+LDB: ============== END OF LOAD BALANCING =============== 1.862
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.862
+LDB: ============= START OF LOAD BALANCING ============== 1.867
+LDB: 4 computes have load of zero
+LDB: Largest compute 1 load 0.001000 is 266.7% of average load 0.000375
+LDB: Average compute 0.001000 is 266.7% of average load 0.000375
+LDB: TIME 1.868 LOAD: AVG 0.000374995 MAX 0.00400019  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2539 MB
+LDB: TIME 1.868 LOAD: AVG 0.000374995 MAX 0.00400019  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: TIME 1.868 LOAD: AVG 0.000374995 MAX 0.00400019  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: ============== END OF LOAD BALANCING =============== 1.868
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 1.87
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 2.204
+LDB: ============== END OF LOAD BALANCING =============== 2.204
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.204
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 2.226
+LDB: 6 computes have load of zero
+LDB: TIME 2.226 LOAD: AVG 0.000999972 MAX 0.0209999  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.3164 MB
+LDB: TIME 2.226 LOAD: AVG 0.000999972 MAX 0.0209999  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.3164 MB
+LDB: TIME 2.226 LOAD: AVG 0.000999972 MAX 0.0209999  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.3164 MB
+LDB: ============== END OF LOAD BALANCING =============== 2.227
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.228
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+TIMING: 20000  CPU: 2.219, 0.0001096/step  Wall: 2.219, 0.0001098/step, 0.00854 hours remaining, 17.285156 MB of memory in use.
+ENERGY:   20000         8.6304         8.0364         4.1819         0.4871            -18.0575         0.5123         0.0000         3.7536        19.1054             26.6495       291.3413         7.5441        26.2286       304.8781
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 20000
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 20000
+WRITING COORDINATES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=20000) takes 0.000 seconds, 17.285 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 20000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=20000) takes 0.000 seconds, 17.285 MB of memory in use
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 2.565
+LDB: ============== END OF LOAD BALANCING =============== 2.565
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.565
+LDB: ============= START OF LOAD BALANCING ============== 2.571
+LDB: 5 computes have load of zero
+LDB: Largest compute 9 load 0.001000 is 114.3% of average load 0.000875
+LDB: Average compute 0.001000 is 114.3% of average load 0.000875
+LDB: TIME 2.571 LOAD: AVG 0.000874981 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2656 MB
+LDB: TIME 2.571 LOAD: AVG 0.000874981 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2656 MB
+LDB: TIME 2.571 LOAD: AVG 0.000874981 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2656 MB
+LDB: ============== END OF LOAD BALANCING =============== 2.571
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.573
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 25000
+WRITING COORDINATES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=25000) takes 0.000 seconds, 17.184 MB of memory in use
+TIMING: 25000  CPU: 2.763, 0.0001088/step  Wall: 2.763, 0.0001088/step, 0.00831111 hours remaining, 17.183594 MB of memory in use.
+ENERGY:   25000        13.3973        10.5219         4.0561         0.7671            -21.2053        -0.2004         0.0000         5.1953        17.8450             30.3770       272.1210        12.5321        30.3653       300.0738
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 25000
+WRITING VELOCITIES TO RESTART FILE AT STEP 25000
+FINISHED WRITING RESTART VELOCITIES
+The last velocity output (seq=25000) takes 0.001 seconds, 17.184 MB of memory in use
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 2.906
+LDB: ============== END OF LOAD BALANCING =============== 2.906
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.906
+LDB: ============= START OF LOAD BALANCING ============== 2.912
+LDB: 5 computes have load of zero
+LDB: Largest compute 9 load 0.001000 is 145.5% of average load 0.000688
+LDB: Average compute 0.001000 is 145.5% of average load 0.000688
+LDB: TIME 2.912 LOAD: AVG 0.000687502 MAX 0.00600004  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2109 MB
+LDB: TIME 2.912 LOAD: AVG 0.000687502 MAX 0.00600004  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2109 MB
+LDB: TIME 2.912 LOAD: AVG 0.000687502 MAX 0.00600004  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2109 MB
+LDB: ============== END OF LOAD BALANCING =============== 2.912
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 2.914
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 3.262
+LDB: ============== END OF LOAD BALANCING =============== 3.262
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.263
+LDB: ============= START OF LOAD BALANCING ============== 3.268
+LDB: 5 computes have load of zero
+LDB: Largest compute 9 load 0.001000 is 84.2% of average load 0.001188
+LDB: Average compute 0.001000 is 84.2% of average load 0.001188
+LDB: TIME 3.268 LOAD: AVG 0.00118756 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2539 MB
+LDB: TIME 3.268 LOAD: AVG 0.00118756 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: TIME 3.268 LOAD: AVG 0.00118756 MAX 0.00500011  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2539 MB
+LDB: ============== END OF LOAD BALANCING =============== 3.268
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.27
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 30000
+WRITING COORDINATES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=30000) takes 0.000 seconds, 17.195 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 30000
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 30000  CPU: 3.303, 0.000108/step  Wall: 3.302, 0.0001078/step, 0.008085 hours remaining, 17.195313 MB of memory in use.
+ENERGY:   30000         5.8584        11.4062         4.0645         0.2329            -19.7684        -0.3775         0.0000         1.5409        24.8495             27.8065       378.9349         2.9570        27.6617       294.7929
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 30000
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 3.605
+LDB: ============== END OF LOAD BALANCING =============== 3.605
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.605
+LDB: ============= START OF LOAD BALANCING ============== 3.611
+LDB: 5 computes have load of zero
+LDB: Largest compute 8 load 0.001000 is 84.2% of average load 0.001187
+LDB: Average compute 0.001000 is 84.2% of average load 0.001187
+LDB: TIME 3.611 LOAD: AVG 0.00118744 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2227 MB
+LDB: TIME 3.611 LOAD: AVG 0.00118744 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2227 MB
+LDB: TIME 3.611 LOAD: AVG 0.00118744 MAX 0.00499988  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2227 MB
+LDB: ============== END OF LOAD BALANCING =============== 3.611
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.613
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+WRITING COORDINATES TO DCD FILE output/vacuum.dcd AT STEP 35000
+WRITING COORDINATES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART COORDINATES
+The last position output (seq=35000) takes 0.000 seconds, 17.195 MB of memory in use
+WRITING VELOCITIES TO RESTART FILE AT STEP 35000
+FINISHED WRITING RESTART VELOCITIES
+TIMING: 35000  CPU: 3.845, 0.0001084/step  Wall: 3.845, 0.0001086/step, 0.00799417 hours remaining, 17.195313 MB of memory in use.
+ENERGY:   35000         6.2766         6.8693         5.2468         0.0753            -18.7845        -1.3456         0.0000         6.2067        19.0155             23.5600       289.9705         4.5445        23.6017       301.3610
+
+WRITING EXTENDED SYSTEM TO RESTART FILE AT STEP 35000
+LDB: ============= START OF LOAD BALANCING ============== 3.945
+LDB: ============== END OF LOAD BALANCING =============== 3.946
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.946
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+LDB: ============= START OF LOAD BALANCING ============== 3.968
+LDB: 6 computes have load of zero
+LDB: TIME 3.968 LOAD: AVG 0.000906251 MAX 0.0220001  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 None MEM: 17.2148 MB
+LDB: TIME 3.968 LOAD: AVG 0.000906251 MAX 0.0220001  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2148 MB
+LDB: TIME 3.968 LOAD: AVG 0.000906251 MAX 0.0220001  PROXIES: TOTAL 31 MAXPE 1 MAXPATCH 31 RefineTorusLB MEM: 17.2148 MB
+LDB: ============== END OF LOAD BALANCING =============== 3.968
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.97
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
+colvars: Synchronizing (emptying the buffer of) trajectory file "output/vacuum.colvars.traj".
+colvars: Saving collective variables state to "output/vacuum.colvars.state".
