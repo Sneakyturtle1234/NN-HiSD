@@ -46,6 +46,8 @@ NN-HiSD, a method which utilizes a neural network surrogate model to approximate
 
 - **train.py**: The main neural network training script used to train surrogate models in different examples.
 
+- **requirements.txt**: Contains all the necessary Python dependencies for the project, including numpy, scipy, matplotlib, torch, and scikit-learn.
+
 ## Installation
 
 1.  **Clone the repository:**
