@@ -104,13 +104,13 @@ This example demonstrates the core functionality on simple 2D and 3D potentials.
    
    - Test robustness with Gaussian noise in training data: 
    
-   - ```bash
+     ```bash
      python examples/ex1_simple/addnoise.py
      ```
    
    - Train for 3D potential: 
    
-   - ```bash
+     ```bash
      python train.py examples/ex1_simple/parametric3d.json
      ```
    
