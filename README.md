@@ -114,7 +114,7 @@ This example demonstrates the core functionality on simple 2D and 3D potentials.
      python train.py examples/ex1_simple/parametric3d.json
      ```
    
-   - Run HiSD for 3D model (α=3, α=7):
+   - Run HiSD for 3D model (α=3, α=6):
      ```bash
      python examples/ex1_simple/exactSL.py
      python examples/ex1_simple/surrogateSL.py
